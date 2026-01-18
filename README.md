@@ -2,8 +2,7 @@
 
 The model outputs molecular representations at increasing levels of chemical abstraction, ranging from the full canonical structure to a ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko scaffold, and a generic scaffold that removes atom-specific identities.
 
-This model was incorporated on 2026-01-08.
-
+This model was incorporated on 2026-01-08.Last packaged on 2026-01-18.
 
 ## Information
 ### Identifiers
@@ -39,12 +38,19 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4k4f](https://hub.docker.com/r/ersiliaos/eos4k4f)
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `784`
+- **Image Size (Mb):** `741.53`
 
+**Computational Performance (seconds):**
+- 10 inputs: `27.77`
+- 100 inputs: `18.32`
+- 10000 inputs: `82.05`
 
 ### References
 - **Source Code**: [https://github.com/chembl/ChEMBL_Structure_Pipeline](https://github.com/chembl/ChEMBL_Structure_Pipeline)
