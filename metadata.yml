@@ -33,3 +33,6 @@ Publication: https://doi.org/10.1186/s13321-020-00456-1
 Source Code: https://github.com/chembl/ChEMBL_Structure_Pipeline
 License: MIT
 Incorporation Date: '2026-01-08'
+S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip
+Model Size: 1.0
+Environment Size: 784.0
