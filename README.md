@@ -2,6 +2,7 @@
 
 The model outputs molecular representations at increasing levels of chemical abstraction, ranging from the full canonical structure to a ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko scaffold, and a generic scaffold that removes atom-specific identities.
 
+This model was incorporated on 2026-01-08.
 
 
 ## Information
@@ -38,8 +39,11 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `1`
+- **Environment Size (Mb):** `784`
 
 
 ### References
