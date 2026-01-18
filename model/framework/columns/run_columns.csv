@@ -1,1 +1,6 @@
 name,type,direction,description
+canonical_smiles,string,,Canonical SMILES for the molecule
+standardized_smiles,string,,ChEMBL-standardized parent SMILES
+flattened_smiles,string,,Standardized SMILES without stereochemistry
+murcko_scaffold,string,,Bemis–Murcko scaffold of the molecule
+generic_scaffold,string,,Generic (atom-type-agnostic) version of the scaffold

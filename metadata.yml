@@ -2,40 +2,29 @@ Identifier: eos4k4f
 Slug: standardization
 Status: In progress
 Title: Small molecule standardization
-Description: Systematic standardization of small molecules
+Description: The model outputs molecular representations at increasing levels of chemical abstraction, ranging from the full canonical structure to a ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko scaffold, and a generic scaffold that removes atom-specific identities. 
 Deployment:
 - Local
-- Online
-Source: Local, Online
-Source Type: Internal, Replicated, External
-Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization, Projection,
-  Similarity search, Generation
+Source: Local
+Source Type: Internal
+Task: Annotation
+Subtask: Property calculation or prediction
 Input:
 - Compound
 Input Dimension: 1
 Output:
-- Value
-- Score
 - Compound
-- Probability
-- Experimental value
-- '...'
-Output Dimension: 1
-Output Consistency: Fixed, Variable
-Interpretation: 'The output of this template model should be interpreted like this.
-
-  '
+Output Dimension: 5
+Output Consistency: Fixed
+Interpretation: 'The model outputs representations at multiple chemical abstraction levels for a given molecule.'
 Tag:
 - Compound generation
 Biomedical Area:
-- Biomedical Area 1
-- Biomedical Area 2
+- Any
 Target Organism:
-- Target Organism 1
-- Target Organism 2
-Publication Type: Peer reviewed, Preprint, Other
+- Any
+Publication Type: Peer reviewed
 Publication Year: 2025
-Publication: null
-Source Code: null
+Publication: https://doi.org/10.1186/s13321-020-00456-1
+Source Code: https://github.com/chembl/ChEMBL_Structure_Pipeline
 License: MIT

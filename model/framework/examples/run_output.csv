@@ -1,0 +1,4 @@
+canonical_smiles,standardized_smiles,flattened_smiles,murcko_scaffold,generic_scaffold
+C[C@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23,C[C@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23,CC1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23,O=c1ccn2c3c(c(N4CCNCC4)ccc13)OCC2,CC1CCC2CCCC3C(C4CCCCC4)CCC1C23
+O=c1ncccn1[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O,O=c1ncccn1[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O,O=c1ncccn1C1OC(CO)C(O)C1O,O=c1ncccn1C1CCCO1,CC1CCCCC1C1CCCC1
+OC[C@@H](O)CN1CCN(c2ccccc2)CC1,OC[C@@H](O)CN1CCN(c2ccccc2)CC1,OCC(O)CN1CCN(c2ccccc2)CC1,c1ccc(N2CCNCC2)cc1,C1CCC(C2CCCCC2)CC1
