@@ -33,18 +33,16 @@ Publication: https://doi.org/10.1186/s13321-020-00456-1
 Source Code: https://github.com/chembl/ChEMBL_Structure_Pipeline
 License: MIT
 Incorporation Date: '2026-01-08'
-Last Packaging Date: '2026-01-22'
+Last Packaging Date: '2026-03-05'
 Release: v1.0.0
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos4k4f
-Docker Architecture:
-  - AMD64
-  - ARM64
+Docker Architecture: AMD64
 Model Size: 1.0
 Environment Size: 791.0
-Image Size: 741.53
-Computational Performance 1: 29.03
-Computational Performance 2: 18.46
-Computational Performance 3: 19.28
-Computational Performance 4: 30.96
-Computational Performance 5: 80.88
+Image Size: 739.96
+Computational Performance 1: 32.42
+Computational Performance 2: 25.19
+Computational Performance 3: 23.87
+Computational Performance 4: 34.91
+Computational Performance 5: 86.19
