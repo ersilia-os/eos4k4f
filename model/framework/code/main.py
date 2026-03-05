@@ -97,13 +97,15 @@ with open(input_file, "r") as f:
 outputs = []
 
 for smiles in smiles_list:
-
-    mol, canonical_smiles = get_canonical_smiles(smiles)
-    mol, standardized_smiles = get_standardized_smiles(mol)
-    mol, flattened_smiles = get_flattened_smiles(mol)
-    mol_scaffold, smiles_scaffold = get_murcko_scaffold(mol)
-    mol_generic_scaffold, smiles_generic_scaffold = get_generic_scaffold(mol_scaffold)
-
+    try:
+        mol, canonical_smiles = get_canonical_smiles(smiles)
+        mol, standardized_smiles = get_standardized_smiles(mol)
+        mol, flattened_smiles = get_flattened_smiles(mol)
+        mol_scaffold, smiles_scaffold = get_murcko_scaffold(mol)
+        mol_generic_scaffold, smiles_generic_scaffold = get_generic_scaffold(mol_scaffold)
+    except Exception:
+        canonical_smiles = standardized_smiles = flattened_smiles = smiles_scaffold = smiles_generic_scaffold = ""
+        
     # Store results
     outputs.append([canonical_smiles, standardized_smiles, flattened_smiles, smiles_scaffold, smiles_generic_scaffold])
 
