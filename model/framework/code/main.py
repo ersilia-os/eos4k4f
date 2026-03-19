@@ -8,12 +8,20 @@ from chembl_structure_pipeline import standardizer
 from rdkit.Chem.Scaffolds import MurckoScaffold
 
 
+def validate_smiles(smiles):
+    if not smiles:
+        return ""
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None or "." in smiles:
+        return ""
+    return smiles
+
 def get_canonical_smiles_datamol(smiles):
     try:
         mol = dm.to_mol(smiles)
         mol = dm.fix_mol(mol)
         mol = dm.sanitize_mol(mol)
-        smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True)
+        smiles = validate_smiles(Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True))
         return mol, smiles
     except:
         return None, ""
@@ -21,7 +29,7 @@ def get_canonical_smiles_datamol(smiles):
 def get_canonical_smiles_rdkit(smiles):
     try:
         mol = Chem.MolFromSmiles(smiles)
-        smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True)
+        smiles = validate_smiles(Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True))
         return mol, smiles
     except:
         return None, ""
@@ -45,7 +53,7 @@ def get_standardized_smiles(mol):
     try:
         mol, _ = standardizer.get_parent_mol(mol)
         mol = standardizer.standardize_mol(mol)
-        standardized_smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True)
+        standardized_smiles = validate_smiles(Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True))
         return mol, standardized_smiles
     except:
         return None, ""
@@ -54,8 +62,8 @@ def get_flattened_smiles(mol):
     if mol is None:
         return None, ""
     try:
-        flattened_smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=False)
-        mol = Chem.MolFromSmiles(flattened_smiles)
+        flattened_smiles = validate_smiles(Chem.MolToSmiles(mol, canonical=True, isomericSmiles=False))
+        mol = Chem.MolFromSmiles(flattened_smiles) if flattened_smiles else None
         return mol, flattened_smiles
     except:
         return None, ""
@@ -65,7 +73,7 @@ def get_murcko_scaffold(mol):
         return None, ""
     try:
         mol_scaffold = MurckoScaffold.GetScaffoldForMol(mol)
-        smiles_scaffold = Chem.MolToSmiles(mol_scaffold, canonical=True)
+        smiles_scaffold = validate_smiles(Chem.MolToSmiles(mol_scaffold, canonical=True))
         return mol_scaffold, smiles_scaffold
     except:
         return None, ""
@@ -75,7 +83,7 @@ def get_generic_scaffold(mol_scaffold):
         return None, ""
     try:
         mol_generic_scaffold = MurckoScaffold.MakeScaffoldGeneric(mol_scaffold)
-        smiles_generic_scaffold = Chem.MolToSmiles(mol_generic_scaffold, canonical=True)
+        smiles_generic_scaffold = validate_smiles(Chem.MolToSmiles(mol_generic_scaffold, canonical=True))
         return mol_generic_scaffold, smiles_generic_scaffold
     except:
         return None, ""
