@@ -2,7 +2,7 @@
 
 The model outputs molecular representations at increasing levels of chemical abstraction, ranging from the full canonical structure to a ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko scaffold, and a generic scaffold that removes atom-specific identities.
 
-This model was incorporated on 2026-01-08.Last packaged on 2026-03-05.
+This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 
 ## Information
 ### Identifiers
@@ -45,12 +45,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `791`
-- **Image Size (Mb):** `739.96`
+- **Image Size (Mb):** `740.12`
 
 **Computational Performance (seconds):**
-- 10 inputs: `32.42`
-- 100 inputs: `23.87`
-- 10000 inputs: `86.19`
+- 10 inputs: `37.55`
+- 100 inputs: `30.88`
+- 10000 inputs: `90.59`
 
 ### References
 - **Source Code**: [https://github.com/chembl/ChEMBL_Structure_Pipeline](https://github.com/chembl/ChEMBL_Structure_Pipeline)
