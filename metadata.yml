@@ -2,16 +2,13 @@ Identifier: eos4k4f
 Slug: standardization
 Status: Ready
 Title: Small molecule standardization
-Description: The model outputs molecular representations at increasing levels of
-  chemical abstraction, ranging from the full canonical structure to a 
-  ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko 
-  scaffold, and a generic scaffold that removes atom-specific identities.
+Description: 'Returns a molecule at five increasing levels of abstraction: the canonical SMILES, a ChEMBL-standardised parent with salts and charges resolved, a form with stereochemistry stripped, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Working through these levels lets compounds be grouped by shared framework even when they differ in decoration or salt form, which is the usual prerequisite for deduplicating a screening collection.'
 Deployment:
   - Local
 Source: Local
 Source Type: Internal
-Task: Annotation
-Subtask: Property calculation or prediction
+Task: Representation
+Subtask: Featurization
 Input:
   - Compound
 Input Dimension: 1
@@ -19,8 +16,7 @@ Output:
   - Compound
 Output Dimension: 5
 Output Consistency: Fixed
-Interpretation: The model outputs representations at multiple chemical 
-  abstraction levels for a given molecule.
+Interpretation: Canonical, standardised, flattened, Murcko scaffold and generic scaffold forms of the molecule.
 Tag:
   - Compound generation
 Biomedical Area:
@@ -28,7 +24,7 @@ Biomedical Area:
 Target Organism:
   - Any
 Publication Type: Peer reviewed
-Publication Year: 2025
+Publication Year: 2020
 Publication: https://doi.org/10.1186/s13321-020-00456-1
 Source Code: https://github.com/chembl/ChEMBL_Structure_Pipeline
 License: MIT

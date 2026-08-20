@@ -1,6 +1,6 @@
 # Small molecule standardization
 
-The model outputs molecular representations at increasing levels of chemical abstraction, ranging from the full canonical structure to a ChEMBL-standardized parent, a stereochemistry-free form, the core Murcko scaffold, and a generic scaffold that removes atom-specific identities.
+Returns a molecule at five increasing levels of abstraction: the canonical SMILES, a ChEMBL-standardised parent with salts and charges resolved, a form with stereochemistry stripped, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Working through these levels lets compounds be grouped by shared framework even when they differ in decoration or salt form, which is the usual prerequisite for deduplicating a screening collection.
 
 This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 
@@ -10,8 +10,8 @@ This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 - **Slug:** `standardization`
 
 ### Domain
-- **Task:** `Annotation`
-- **Subtask:** `Property calculation or prediction`
+- **Task:** `Representation`
+- **Subtask:** `Featurization`
 - **Biomedical Area:** `Any`
 - **Target Organism:** `Any`
 - **Tags:** `Compound generation`
@@ -23,7 +23,7 @@ This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 ### Output
 - **Output Dimension:** `5`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** The model outputs representations at multiple chemical abstraction levels for a given molecule.
+- **Interpretation:** Canonical, standardised, flattened, Murcko scaffold and generic scaffold forms of the molecule.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
@@ -56,7 +56,7 @@ Below are the **Output Columns** of the model:
 - **Source Code**: [https://github.com/chembl/ChEMBL_Structure_Pipeline](https://github.com/chembl/ChEMBL_Structure_Pipeline)
 - **Publication**: [https://doi.org/10.1186/s13321-020-00456-1](https://doi.org/10.1186/s13321-020-00456-1)
 - **Publication Type:** `Peer reviewed`
-- **Publication Year:** `2025`
+- **Publication Year:** `2020`
 - **Ersilia Contributor:** [arnaucoma24](https://github.com/arnaucoma24)
 
 ### License
