@@ -1,6 +1,6 @@
 # Small molecule standardization
 
-Returns a molecule at five increasing levels of abstraction: the canonical SMILES, a ChEMBL-standardised parent with salts and charges resolved, a form with stereochemistry stripped, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Working through these levels lets compounds be grouped by shared framework even when they differ in decoration or salt form, which is the usual prerequisite for deduplicating a screening collection.
+Returns a molecule at five increasing levels of abstraction, the canonical SMILES, a ChEMBL-standardised parent with salts and solvents removed, a form without stereochemistry, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Ersilia chained Datamol sanitisation, the ChEMBL Structure Pipeline of Bento and colleagues, and RDKit scaffold code to produce them. Working through the levels groups compounds by shared framework even when decoration or salt form differs, the usual prerequisite for deduplicating a collection.
 
 This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
 ### Output
 - **Output Dimension:** `5`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Canonical, standardised, flattened, Murcko scaffold and generic scaffold forms of the molecule.
+- **Interpretation:** Five SMILES strings per input, from the canonical form through salt-free and stereochemistry-free versions to both scaffold levels.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
