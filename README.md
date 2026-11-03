@@ -3,7 +3,7 @@
 Returns a molecule at five increasing levels of abstraction, the canonical SMILES, a ChEMBL-standardised parent with salts and solvents removed, a form without stereochemistry, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Ersilia chained Datamol sanitisation, the ChEMBL Structure Pipeline of Bento and colleagues, and RDKit scaffold code to produce them. Working through the levels groups compounds by shared framework even when decoration or salt form differs, the usual prerequisite for deduplicating a collection.
 
 This model was incorporated on 2026-01-08.
-Last packaged on 2026-03-19.
+Last packaged on 2026-11-03.
 
 ## Information
 ### Identifiers
@@ -40,18 +40,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `Internal`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4k4f](https://hub.docker.com/r/ersiliaos/eos4k4f)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4k4f.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `796`
-- **Image Size (Mb):** `740.12`
+- **Image Size (Mb):** `680.03`
 
 **Computational Performance (seconds):**
-- 10 inputs: `37.55`
-- 100 inputs: `30.88`
-- 10000 inputs: `90.59`
+- 10 inputs: `27.87`
+- 100 inputs: `18.53`
+- 10000 inputs: `83.12`
 
 ### References
 - **Source Code**: [https://github.com/chembl/ChEMBL_Structure_Pipeline](https://github.com/chembl/ChEMBL_Structure_Pipeline)
