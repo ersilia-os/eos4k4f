@@ -2,7 +2,8 @@
 
 Returns a molecule at five increasing levels of abstraction, the canonical SMILES, a ChEMBL-standardised parent with salts and solvents removed, a form without stereochemistry, the Bemis-Murcko scaffold, and a generic scaffold in which atom types are discarded. Ersilia chained Datamol sanitisation, the ChEMBL Structure Pipeline of Bento and colleagues, and RDKit scaffold code to produce them. Working through the levels groups compounds by shared framework even when decoration or salt form differs, the usual prerequisite for deduplicating a collection.
 
-This model was incorporated on 2026-01-08.Last packaged on 2026-03-19.
+This model was incorporated on 2026-01-08.
+Last packaged on 2026-03-19.
 
 ## Information
 ### Identifiers
